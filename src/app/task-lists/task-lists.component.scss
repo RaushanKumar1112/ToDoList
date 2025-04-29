@@ -1,0 +1,34 @@
+.row-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.column-container{
+    border: 2px solid red;
+    width: 45%;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    background-color: rgb(17, 171, 182);
+    color: rgb(192, 19, 71);
+    border: 2px solid;
+    width: 45%;
+    margin-bottom: 0px;
+    align-self: center;
+}
+
+button{
+    background-color: rgb(17, 171, 182);
+    color: rgb(192, 19, 71);
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 0px;
+    align-self: center; 
+}
+
+

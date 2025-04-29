@@ -1,0 +1,17 @@
+<div class="task">
+    <ul *ngFor="let task of tasks">
+        <li>
+            <p *ngIf="editTaskId !== task.id" [ngStyle]="{'text-decoration': task.isCompleted ? 'line-through' : 'none'}"> {{task.task}}</p>
+            <input *ngIf="editTaskId === task.id"
+            type="text"
+            [(ngModel)]="updatedTask"
+            [placeholder]="task.task" />
+            <div class="functions">
+                <button (click)="updateTasks(task.id)"> Update </button>
+                <button (click)="deleteTask(task.id)"> Delete </button>
+                <button (click)="isCompleted(task.id)"> Mark Completed </button>
+                <button (click)="isUncomplete(task.id)"> Mark Uncompleted </button>
+            </div>
+        </li>
+    </ul>
+</div>

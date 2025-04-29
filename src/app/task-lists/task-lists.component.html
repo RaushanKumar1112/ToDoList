@@ -1,0 +1,8 @@
+<div class="row-container">
+    <h1>Tasks to Complete</h1>
+    <div class="column-container">
+        <app-task></app-task>
+        <button (click)="addTask = true" *ngIf="!addTask">Add Task</button>
+        <app-add-task *ngIf="addTask" (taskSubmitted)="handleSubmit($event)"></app-add-task>
+    </div>
+</div>
