@@ -1,12 +1,14 @@
 export class Task {
-    static idCounter: number = 0;
-    id: number;
-    task: string;
+    id?: number;
+    name: string;
     isCompleted: boolean;
+    completedAt?: Date;
+    createdAt: Date;
+    updatedAt?: Date;
 
-    constructor(task: string, completed: boolean) {
-        this.id = ++Task.idCounter;
-        this.task = task;
-        this.isCompleted = completed;
+    constructor(task: string) {
+        this.name = task;
+        this.isCompleted = false;
+        this.createdAt = new Date();
     }
 }
